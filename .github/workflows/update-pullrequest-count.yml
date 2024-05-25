@@ -3,7 +3,7 @@ name: Get Pull Request Count
 on:
   schedule:
     - cron: '*/5 * * * *'
-
+  workflow_dispatch:
 jobs:
   get-pull-request-count:
     runs-on: ubuntu-latest
