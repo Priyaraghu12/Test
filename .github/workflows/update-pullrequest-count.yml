@@ -1,0 +1,23 @@
+name: Get Pull Request Count
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+
+jobs:
+  get-pull-request-count:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Get pull request count
+        id: pr_count
+        run: |
+          PR_COUNT=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+          "https://api.github.com/repos/${{ github.repository }}/pulls?state=all" | jq '. | length')
+          echo "PR_COUNT=$PR_COUNT" >> $GITHUB_ENV
+
+      - name: Print pull request count
+        run: echo "The number of pull requests in the repository is: ${{ env.PR_COUNT }}"
