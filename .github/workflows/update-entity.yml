@@ -17,8 +17,8 @@ jobs:
         uses: port-labs/port-github-action@v1
         with:
           blueprint: "service"
-          identifier: "Test"
+          identifier: "Loginservice"
           clientId: ${{ secrets.PORT_CLIENT_ID }}
           clientSecret: ${{ secrets.PORT_CLIENT_SECRET }}
           operation: UPSERT
-          properties: '{"p_rcount_githubupdate": "5"}'
+          properties: '{"p_rcount_githubupdate": "20"}'
