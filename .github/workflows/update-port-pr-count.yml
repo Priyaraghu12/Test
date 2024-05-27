@@ -23,6 +23,7 @@ jobs:
         run: |
           echo "Pull Request Count: $PR_COUNT"
           echo "Pull Request Count: ${{ env.PR_COUNT }}"
+          echo "Github Repo Name: ${{ github.repository }}"
 
       - name: Update Port Entity
         uses: port-labs/port-github-action@v1
