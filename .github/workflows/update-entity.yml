@@ -17,7 +17,7 @@ jobs:
         uses: port-labs/port-github-action@v1
         with:
           blueprint: "service"
-          entities: "Test"
+          identifier: "Test"
           clientId: ${{ secrets.PORT_CLIENT_ID }}
           clientSecret: ${{ secrets.PORT_CLIENT_SECRET }}
           operation: UPSERT
