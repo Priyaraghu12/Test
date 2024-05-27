@@ -24,3 +24,12 @@ jobs:
           echo "Pull Request Count: $PR_COUNT"
           echo "Pull Request Count: ${{ env.PR_COUNT }}"
 
+      - name: Update Port Entity
+        uses: port-labs/port-github-action@v1
+        with:
+          blueprint: "service"
+          identifier: "Loginservice"
+          clientId: ${{ secrets.PORT_CLIENT_ID }}
+          clientSecret: ${{ secrets.PORT_CLIENT_SECRET }}
+          operation: UPSERT
+          properties: '{"p_rcount_githubupdate": $PR_COUNT}'
