@@ -32,4 +32,4 @@ jobs:
           clientId: ${{ secrets.PORT_CLIENT_ID }}
           clientSecret: ${{ secrets.PORT_CLIENT_SECRET }}
           operation: UPSERT
-          properties: '{"p_rcount_githubupdate": $PR_COUNT}'
+          properties: '{"p_rcount_githubupdate": ${{ env.PR_COUNT }}}'
