@@ -16,7 +16,6 @@ jobs:
       - name: Update Port Entity
         uses: port-labs/port-github-action@v1
         with:
-	        
           blueprint: "service"
           entity-id: "Test"
           clientId: ${{ secrets.PORT_CLIENT_ID }}
