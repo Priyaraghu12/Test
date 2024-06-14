@@ -1,0 +1,25 @@
+# This is a comment.
+# Each line is a file pattern followed by one or more owners.
+
+# Default owners for the repo.
+*       @global-owner1 @global-owner2
+
+# Specific owners for JS files.
+*.js    @js-owner
+
+# Owners by email.
+*.go    docs@example.com
+
+# Team owners.
+*.txt   @octo-org/octocats
+
+# Owners for specific directories.
+# Root and subdirectories.
+/build/logs/ @doctocat
+/docs/ @doctocat
+/apps/ @octocat
+/apps/github @doctocat
+**/logs @octocat
+
+# Multiple owners for a directory.
+/scripts/ @doctocat @octocat
