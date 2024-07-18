@@ -2,4 +2,4 @@ identifier: audit-api
 blueprint: service
 properties:
   slack: https://egrupp.slack.com/archives/C07AUUAL7SM
-  url: https://gitlab.delfi.net/eg/delfi/api/audit-api/-/wikis/home
+  url: https://gitlab.delfi.net/eg/delfi/api/audit-api/-/wikis/
